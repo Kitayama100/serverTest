@@ -29,7 +29,7 @@ const dotenv = __importStar(require("dotenv"));
 class Secrets {
     constructor(env) {
         dotenv.config({
-            path: (__dirname + "../../.env")
+            path: (__dirname + "../../../.env")
         });
     }
     static getSecret(secret) {
