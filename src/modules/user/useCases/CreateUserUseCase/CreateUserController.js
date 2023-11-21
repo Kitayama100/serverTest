@@ -28,7 +28,7 @@ class CreateUserController extends BaseController_1.BaseController {
                     email: dto.email,
                     name: dto.name,
                     token_function: jwt_1.TokenFunctions.authenticateUser,
-                    role: dto.role,
+                    role: 0,
                 });
                 this.ok(res, { token: token });
             }
