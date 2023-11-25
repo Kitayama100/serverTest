@@ -11,7 +11,7 @@ class UserMap {
                 email: props.props.email.value,
                 password: props.props.password.value,
                 name: props.props.name.value,
-                role: 1
+                role: props.props.role.value
             };
             return (0, Result_1.right)(UserObject);
         }

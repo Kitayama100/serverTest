@@ -25,7 +25,7 @@ class Middleware {
             }
             const decoded = yield new authService_1.AuthService(secretsManager_1.Secrets.getSecret("SECRET_KEY")).decodeJWT(token);
             if (decoded.isRight()) {
-                if (decoded.value.role === 0) {
+                if (decoded.value.role !== 1) {
                     return res.status(401).send("Unauthorized account");
                 }
                 return next();

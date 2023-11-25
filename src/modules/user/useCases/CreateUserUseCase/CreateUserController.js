@@ -23,6 +23,7 @@ class CreateUserController extends BaseController_1.BaseController {
                 if (result.isLeft()) {
                     return this.errorHandler(res, result.value);
                 }
+                console.log(dto.role);
                 const token = yield authService.signJWT({
                     uid: result.value._id,
                     email: dto.email,
